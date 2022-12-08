@@ -49,7 +49,7 @@ sudo apt install -y network-manager-gnome
 sudo apt install -y lxappearance 
 
 # Browser Installation (eg. chromium)
-sudo apt install -y chromium
+sudo apt install -y firefox-esr
 
 # Bittorrent client installation (eg. transmission)
 sudo apt install -y transmission
