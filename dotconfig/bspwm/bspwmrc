@@ -28,7 +28,7 @@ bspc rule -a Firefox-esr desktop='^2'
 bspc rule -a Pcmanfm desktop='^3'
 bspc rule -a Evince desktop='^4'
 bspc rule -a Transmission-gtk desktop='^5'
-bspc rule -a MEGAsync state=floating border=off
+bspc rule -a MEGAsync state=floating border=off follow=off
 
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
