@@ -5,7 +5,7 @@
 
 # replace source file
 sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
-sudo cp ~/debian-bspwm/sources.list /etc/apt/
+sudo cp ~/debian-bspwm-stable/sources.list /etc/apt/
 sudo apt update && sudo apt upgrade -y
 
 # xorg display server installation
@@ -24,11 +24,11 @@ sudo apt install -y intel-microcode
 # Network File Tools/System Events
 sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends locate mtp-tools
 
-# Download manager
-sudo apt install -y wget axel curl aria2
-
 sudo systemctl enable avahi-daemon
 sudo systemctl enable acpid
+
+# Download manager
+sudo apt install -y wget axel curl aria2
 
 # File Manager (eg. pcmanfm,krusader,thunar,nautilus)
 sudo apt install -y pcmanfm
@@ -65,31 +65,8 @@ sudo apt install -y arc-theme
 sudo apt install -y papirus-icon-theme
 sudo apt install -y numix-icon-theme
 
-# Cursor Setup
-git clone https://github.com/alvatip/Nordzy-cursors
-cd Nordzy-cursors && sudo ./install.sh
-cd ../ && rm -rf Nordzy-cursors
-
-# wallpapers
-wget https://gitlab.com/dwt1/wallpapers/-/archive/master/wallpapers-master.zip
-sudo unzip wallpapers-master.zip -d /usr/share/images/
-rm wallpapers-master.zip
-
 # Fonts and icons for now
 sudo apt install -y fonts-cascadia-code fonts-indic fonts-ubuntu fonts-crosextra-carlito fonts-crosextra-caladea fonts-liberation2 fonts-noto-color-emoji font-manager fonts-roboto
-
-# wps-fonts
-git clone https://github.com/udoyen/wps-fonts.git
-sudo mkdir -p ~/.local/share/fonts
-cd wps-fonts && cd wps && sudo  mv * ~/.local/share/fonts
-cd ../ && cd ../ && rm -rf wps-fonts
-fc-cache -fv
-
-# Material Design Iconic Fonts
-wget https://github.com/zavoloklom/material-design-iconic-font/releases/download/2.2.0/material-design-iconic-font.zip
-sudo unzip material-design-iconic-font.zip -d ~/.local/share/fonts/
-rm -f material-design-iconic-font.zip
-fc-cache -fv
 
 # EXA installation
 # replace ls command in .bashrc file with line below
@@ -126,10 +103,10 @@ sudo apt install -y redshift
 
 # redshift unit file
 mkdir -p ~/.config/systemd/user
-cp ~/debian-bspwm/dotscripts/redshift.service ~/.config/systemd/user
+cp ~/debian-bspwm-stable/dotscripts/redshift.service ~/.config/systemd/user
 
 # Installation of mpv latest version
-# source ~/debian-bspwm/mpv.sh
+# source ~/debian-bspwm-stable/mpv.sh
 
 # Polybar
 sudo apt install -y polybar -t bullseye-backports
@@ -151,38 +128,61 @@ sudo apt install -y libavcodec-extra ttf-mscorefonts-installer rar unrar gstream
 # git clone https://github.com/EliverLara/Nordic.git
 # sudo mv Nordic /usr/share/themes
 
+# Cursor Setup
+git clone https://github.com/alvatip/Nordzy-cursors
+cd Nordzy-cursors && sudo ./install.sh
+cd ../ && rm -rf Nordzy-cursors
+
+# wallpapers
+wget https://gitlab.com/dwt1/wallpapers/-/archive/master/wallpapers-master.zip
+sudo unzip wallpapers-master.zip -d /usr/share/images/
+rm wallpapers-master.zip
+
+# wps-fonts
+git clone https://github.com/udoyen/wps-fonts.git
+sudo mkdir -p ~/.local/share/fonts
+cd wps-fonts && cd wps && sudo  mv * ~/.local/share/fonts
+cd ../ && cd ../ && rm -rf wps-fonts
+fc-cache -fv
+
+# Material Design Iconic Fonts
+wget https://github.com/zavoloklom/material-design-iconic-font/releases/download/2.2.0/material-design-iconic-font.zip
+sudo unzip material-design-iconic-font.zip -d ~/.local/share/fonts/
+rm -f material-design-iconic-font.zip
+fc-cache -fv
+
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
 
 # Copy config files
-cp -r ~/debian-bspwm/dotconfig/* ~/.config
+cp -r ~/debian-bspwm-stable/dotconfig/* ~/.config
 
 # Profile picture customisation
 sudo mkdir -p /usr/share/images/profile-pic
-sudo cp ~/debian-bspwm/assets/penguin-g0dc85b0fd_640.png /usr/share/images/profile-pic
+sudo cp ~/debian-bspwm-stable/assets/penguin-g0dc85b0fd_640.png /usr/share/images/profile-pic
 
 #rofi power menu
-sudo cp ~/debian-bspwm/dotscripts/rofi-power-menu /usr/local/bin
+sudo cp ~/debian-bspwm-stable/dotscripts/rofi-power-menu /usr/local/bin
 
 # greenclip
-sudo cp ~/debian-bspwm/dotscripts/greenclip /usr/local/bin
+sudo cp ~/debian-bspwm-stable/dotscripts/greenclip /usr/local/bin
 
 # nerdfonts installation
-source ~/debian-bspwm/nerdfonts.sh
+source ~/debian-bspwm-stable/nerdfonts.sh
 
 # flatpak support
 sudo apt install flatpak -y
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # copy scripts folder to home directory
-cp -r ~/debian-bspwm/scripts ~/
+cp -r ~/debian-bspwm-stable/scripts ~/
 
 # Nvidia driver prerequites
 sudo apt install linux-headers-amd64 -y
 
 # Theme support for kde/qt5 applications
 sudo mv /etc/environment /etc/environment.bak
-sudo cp ~/debian-bspwm/environment /etc/
+sudo cp ~/debian-bspwm-stable/environment /etc/
 
 # Install Lightdm Console Display Manager
 sudo apt install -y lightdm lightdm-gtk-greeter-settings
