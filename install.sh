@@ -140,14 +140,13 @@ rm wallpapers-master.zip
 
 # wps-fonts
 git clone https://github.com/udoyen/wps-fonts.git
-sudo mkdir -p ~/.local/share/fonts
-cd wps-fonts && cd wps && sudo  mv * ~/.local/share/fonts
+cd wps-fonts && cd wps && sudo  mv * /usr/share/fonts/
 cd ../ && cd ../ && rm -rf wps-fonts
 fc-cache -fv
 
 # Material Design Iconic Fonts
 wget https://github.com/zavoloklom/material-design-iconic-font/releases/download/2.2.0/material-design-iconic-font.zip
-sudo unzip material-design-iconic-font.zip -d ~/.local/share/fonts/
+sudo unzip material-design-iconic-font.zip -d /usr/share/fonts/
 rm -f material-design-iconic-font.zip
 fc-cache -fv
 
