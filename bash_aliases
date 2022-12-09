@@ -14,7 +14,7 @@ alias tl='trans'
 alias share='kdeconnect-cli -d $(kdeconnect-cli -a --id-only) --share'
 
 # Backup Script Initiate
-alias backup='~/scripts/./bkp-config.sh'
+alias backup='/home/$USER/scripts/./bkp-config.sh'
 
 # shutdown
 alias shutdown='shutdown -h now'

@@ -39,7 +39,7 @@ greenclip daemon &
 
 # conky
 killall conky 
-conky -c ~/.config/conky/ak-dracula.conkyrc &
+conky -c /home/$USER/.config/conky/ak-dracula.conkyrc &
 
 # Geoclue 2
 /usr/libexec/geoclue-2.0/demos/agent &

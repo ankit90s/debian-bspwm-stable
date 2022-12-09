@@ -123,4 +123,4 @@ open ()
 
 clear && pfetch
 eval "$(starship init bash)"
-export PATH="/home/sammy/.local/bin:$PATH"
+export PATH="/home/$USER/.local/bin:$PATH"

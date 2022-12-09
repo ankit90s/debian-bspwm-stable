@@ -12,7 +12,7 @@ super + Return
 
 # program launcher
 super + c
-	rofi -modi "clipboard:greenclip print" -show clipboard -config ~/.config/rofi/clipboard/config.rasi run-command '{cmd}'
+	rofi -modi "clipboard:greenclip print" -show clipboard -config /home/$USER/.config/rofi/clipboard/config.rasi run-command '{cmd}'
 
 # Calculator
 XF86Calculator
@@ -24,7 +24,7 @@ super + x
 
 # Rofi
 super + d
-	rofi -show drun -config ~/.config/rofi/menu/config.rasi
+	rofi -show drun -config /home/$USER/.config/rofi/menu/config.rasi
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -32,11 +32,11 @@ super + Escape
 
 # rofi emoji menu
 super + e
-	rofi -modi emoji -show emoji -config ~/.config/rofi/emoji/squared-everforest.rasi
+	rofi -modi emoji -show emoji -config /home/$USER/.config/rofi/emoji/squared-everforest.rasi
 
 # rofi power menu
 super + z
-	rofi -show p -modi p:rofi-power-menu -config ~/.config/rofi/power/squared-everforest.rasi
+	rofi -show p -modi p:rofi-power-menu -config /home/$USER/.config/rofi/power/squared-everforest.rasi
 
 # Full screen screenshot using xfce4-screenshooter
 Print
@@ -48,7 +48,7 @@ shift + Print
 
 # Calculator
 super + w
-	rofi -show calc -config ~/.config/rofi/calculator/config.rasi -no-show-match -no-sort
+	rofi -show calc -config /home/$USER/.config/rofi/calculator/config.rasi -no-show-match -no-sort
 
 #
 # bspwm hotkeys
