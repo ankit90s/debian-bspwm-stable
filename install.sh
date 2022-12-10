@@ -56,14 +56,13 @@ sudo apt install -y transmission
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory
-sudo apt install -y nitrogen
+sudo apt install -y nitrogen feh
  
 # Theme support
 sudo apt install -y arc-theme
 
 # icon theme
 sudo apt install -y papirus-icon-theme
-sudo apt install -y numix-icon-theme
 
 # Fonts and icons for now
 sudo apt install -y fonts-cascadia-code fonts-indic fonts-ubuntu fonts-crosextra-carlito fonts-crosextra-caladea fonts-liberation2 fonts-noto-color-emoji font-manager fonts-roboto
@@ -96,7 +95,7 @@ sudo apt install -y espeak translate-shell cmatrix hddtemp ncdu ranger calcurse
 # sudo apt install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 
 # Additional Packages
-sudo apt install -y xsel psmisc grep sed gawk openssl ffmpeg qalc gzip fzf zip
+sudo apt install -y xsel psmisc grep sed gawk openssl ffmpeg qalc gzip fzf zip unzip
 
 # Redshift installation
 sudo apt install -y redshift
@@ -117,12 +116,12 @@ sudo apt install -y dunst -t bullseye-backports
 # yt-dlp
 sudo apt install -y yt-dlp -t bullseye-backports
 
+# Restricted Extras
+sudo apt install -y libavcodec-extra ttf-mscorefonts-installer rar unrar gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
+
 # Command line text editor -- nano preinstalled 
 sudo apt install -y neovim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-# Restricted Extras
-sudo apt install -y libavcodec-extra ttf-mscorefonts-installer rar unrar gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
 
 # Nordic Theme
 # git clone https://github.com/EliverLara/Nordic.git
