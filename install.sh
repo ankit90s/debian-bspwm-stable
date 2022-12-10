@@ -95,7 +95,7 @@ sudo apt install -y espeak translate-shell cmatrix hddtemp ncdu ranger calcurse
 # sudo apt install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 
 # Additional Packages
-sudo apt install -y xsel psmisc grep sed gawk openssl ffmpeg qalc gzip fzf zip unzip
+sudo apt install -y xsel psmisc grep sed gawk openssl ffmpeg qalc gzip fzf zip unzip tar
 
 # Redshift installation
 sudo apt install -y redshift
