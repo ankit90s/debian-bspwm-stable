@@ -62,7 +62,7 @@ sudo apt install -y nitrogen feh
 sudo apt install -y arc-theme
 
 # icon theme
-sudo apt install -y papirus-icon-theme
+sudo apt install -y papirus-icon-theme -t bullseye-backports
 
 # Fonts and icons for now
 sudo apt install -y fonts-cascadia-code fonts-indic fonts-ubuntu fonts-crosextra-carlito fonts-crosextra-caladea fonts-liberation2 fonts-noto-color-emoji font-manager fonts-roboto
@@ -91,9 +91,6 @@ sudo apt install -y geany scrot xarchiver lxpolkit conky gpicview kcalc gpick kd
 # terminal apps
 sudo apt install -y espeak translate-shell cmatrix hddtemp ncdu ranger calcurse
 
-# Dependencies for alacritty terminal
-# sudo apt install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
-
 # Additional Packages
 sudo apt install -y xsel psmisc grep sed gawk openssl ffmpeg qalc gzip fzf zip unzip tar
 
@@ -103,9 +100,6 @@ sudo apt install -y redshift
 # redshift unit file
 mkdir -p ~/.config/systemd/user
 cp ~/debian-bspwm-stable/dotscripts/redshift.service ~/.config/systemd/user
-
-# Installation of mpv latest version
-# source ~/debian-bspwm-stable/mpv.sh
 
 # Polybar
 sudo apt install -y polybar -t bullseye-backports
@@ -137,18 +131,6 @@ wget https://gitlab.com/dwt1/wallpapers/-/archive/master/wallpapers-master.zip
 sudo unzip wallpapers-master.zip -d /usr/share/images/
 rm wallpapers-master.zip
 
-# wps-fonts
-git clone https://github.com/udoyen/wps-fonts.git
-cd wps-fonts && cd wps && sudo  mv * /usr/share/fonts/
-cd ../ && cd ../ && rm -rf wps-fonts
-fc-cache -fv
-
-# Material Design Iconic Fonts
-wget https://github.com/zavoloklom/material-design-iconic-font/releases/download/2.2.0/material-design-iconic-font.zip
-sudo unzip material-design-iconic-font.zip -d /usr/share/fonts/
-rm -f material-design-iconic-font.zip
-fc-cache -fv
-
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
 
@@ -165,18 +147,15 @@ sudo cp ~/debian-bspwm-stable/dotscripts/rofi-power-menu /usr/local/bin
 # greenclip
 sudo cp ~/debian-bspwm-stable/dotscripts/greenclip /usr/local/bin
 
-# nerdfonts installation
-source ~/debian-bspwm-stable/nerdfonts.sh
-
 # flatpak support
-sudo apt install flatpak -y
+sudo apt install -y flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # copy scripts folder to home directory
 cp -r ~/debian-bspwm-stable/scripts ~/
 
 # Nvidia driver prerequites
-sudo apt install linux-headers-amd64 -y
+sudo apt install -y linux-headers-$(uname -r)
 
 # Theme support for kde/qt5 applications
 sudo mv /etc/environment /etc/environment.bak
