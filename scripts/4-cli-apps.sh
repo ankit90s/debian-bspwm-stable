@@ -31,8 +31,8 @@ sudo make install doc
 cd ../ && rm -rf ytfzf
 
 # speedtest
-# curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
-# sudo apt -y install speedtest
+curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+sudo apt -y install speedtest
 
 hash -r
 
