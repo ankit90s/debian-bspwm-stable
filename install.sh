@@ -34,7 +34,7 @@ sudo apt install -y wget axel curl aria2
 sudo apt install -y pcmanfm
 
 # Terminal (eg. terminator,kitty,xfce4-terminal)
-sudo apt install -y kitty
+sudo apt install -y alacritty
 
 # Sound packages
 sudo apt install -y pulseaudio alsa-utils pavucontrol
@@ -62,7 +62,7 @@ sudo apt install -y nitrogen feh
 sudo apt install -y arc-theme
 
 # icon theme
-sudo apt install -y papirus-icon-theme -t bullseye-backports
+sudo apt install -y papirus-icon-theme
 
 # Fonts and icons for now
 sudo apt install -y fonts-cascadia-code fonts-indic fonts-ubuntu fonts-crosextra-carlito fonts-crosextra-caladea fonts-liberation2 fonts-noto-color-emoji font-manager fonts-roboto
@@ -102,19 +102,19 @@ mkdir -p ~/.config/systemd/user
 cp ~/debian-bspwm-stable/dotscripts/redshift.service ~/.config/systemd/user
 
 # Polybar
-sudo apt install -y polybar -t bullseye-backports
+sudo apt install -y polybar
 
 # Dunst
-sudo apt install -y dunst -t bullseye-backports
+sudo apt install -y dunst
 
 # yt-dlp
-sudo apt install -y yt-dlp -t bullseye-backports
+sudo apt install -y yt-dlp -t bookworm-backports
 
 # Restricted Extras
 sudo apt install -y libavcodec-extra ttf-mscorefonts-installer rar unrar gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
 
 # Command line text editor -- nano preinstalled 
-sudo apt install -y neovim
+sudo apt install -y neovim micro
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Nordic Theme
