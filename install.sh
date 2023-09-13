@@ -134,9 +134,6 @@ rm wallpapers-master.zip
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
 
-# Copy config files
-cp -r ~/debian-bspwm-stable/dotconfig/* ~/.config
-
 # Profile picture customisation
 sudo mkdir -p /usr/share/images/profile-pic
 sudo cp ~/debian-bspwm-stable/assets/penguin-g0dc85b0fd_640.png /usr/share/images/profile-pic
@@ -160,6 +157,13 @@ sudo apt install -y linux-headers-$(uname -r)
 # Theme support for kde/qt5 applications
 sudo mv /etc/environment /etc/environment.bak
 sudo cp ~/debian-bspwm-stable/environment /etc/
+
+# config files
+cd /home/$USER
+git clone https://github.com/ankit90s/dotconfig && cd dotconfig
+cp -r * /home/$USER/.config
+sudo cp starship.toml /root/.config
+cd ..
 
 # Install Lightdm Console Display Manager
 sudo apt install -y lightdm lightdm-gtk-greeter-settings
